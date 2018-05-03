@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_btgrow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_find"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/div_white"
+            android:text="搜索" />
+
+        <Button
+            android:id="@+id/bt_connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/div_white"
+            android:text="建组" />
+
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/div_white"
+            android:text="发送" />
+
+        <ToggleButton
+            android:id="@+id/TogBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:clickable="false"
+            android:textOff="断开"
+            android:textOn="连接" />
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="类型:" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/layout_btgrow"
+        android:background="@color/div_white" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_margin="2dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="公告!!!请留意fdddddddddddddddddddddddddddddddddddddddddddddddsdfsf。"
+        android:textColor="#f00"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_msg"
+        android:layout_margin="2dp"
+        android:hint="请输入公告内容" />
+
+    <LinearLayout
+        android:id="@+id/lv_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_send" >
+
+        <Button
+            android:id="@+id/bt_broadcast_or_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/div_white"
+            android:text="广播" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/div_white"
+            android:text="停止" />
+    </LinearLayout>
+    <View
+        android:id="@+id/div_tab_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="2dp"
+        android:layout_below="@id/lv_bt"
+        android:background="@color/div_white" />
+	<TextView
+	    android:id="@+id/tv_groupdevice"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div_tab_bar1"
+        android:layout_margin="2dp"
+        android:background="@color/bg_gray"
+        android:text="在线用户:"
+        android:textSize="15sp"
+        android:textColor="#f00"
+	    />
+	<View
+        android:id="@+id/div_tab_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+         android:layout_margin="2dp"
+        android:layout_below="@id/tv_groupdevice"
+        android:background="@color/div_white" />
+    <TextView
+        android:id="@+id/tv_findmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div_tab_bar2"
+        android:layout_margin="2dp"
+        android:background="@color/bg_gray"
+        android:text="设备信息"
+        android:textSize="15sp" />
+    <ListView 
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_findmsg"
+         android:layout_margin="2dp"
+        android:dividerHeight="1sp"
+        ></ListView>
+    
+
+</RelativeLayout>
